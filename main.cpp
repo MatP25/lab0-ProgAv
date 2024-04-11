@@ -14,6 +14,10 @@ int main() {
 
 	cout << biblioteca->ninosToString();
 	cout << biblioteca->objetosToString();
+	cout << "_______________________________________" << endl;
+
+
+
 
 	return 0;
 }/*

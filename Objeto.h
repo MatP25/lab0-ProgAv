@@ -25,6 +25,7 @@ protected:
 	int anioComprado;
 	estado condicion;
 	Nino* prestadoA;
+
 public:
 	Objeto();
 	virtual ~Objeto();
@@ -32,7 +33,7 @@ public:
 	string estadoToString();
 	string getNombre();
 	bool estaPrestado();
-
+	Nino* perteneceA();
 };
 
 #endif /* OBJETO_H_ */

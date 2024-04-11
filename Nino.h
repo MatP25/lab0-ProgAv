@@ -24,10 +24,11 @@ private:
 	set<Objeto*> objetosEnPrestamo;
 public:
 	Nino();
+	Nino(string nombre, int edad, string direccion, string telefono);
 	virtual ~Nino();
 	set<string> listarObjetosPrestados();
 	string getNombre();
-	void pedirObjeto(Objeto* objeto, Nino* nino);
+	void pedirObjeto(Objeto* objeto);
 	void devolverObjeto(Objeto* objeto, Nino* nino);
 };
 

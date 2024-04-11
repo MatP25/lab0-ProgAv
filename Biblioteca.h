@@ -9,9 +9,8 @@
 #define BIBLIOTECA_H_
 
 #include "Objeto.h"
-#include "set"
-
 #include "Nino.h"
+#include "set"
 
 class Biblioteca {
 private:
@@ -21,7 +20,8 @@ private:
 public:
 	Biblioteca();
 	virtual ~Biblioteca();
-	void insertarNuevoObjeto(Objeto* objeto);
+	void insertarNuevoNino(Nino* nuevoNnino);
+	void insertarNuevoObjeto(Objeto* nuevoObjeto);
 	void removerObjeto(string nombreObjeto);
 	Nino* getNino(string nombreNino);
 	Objeto* getObjeto(string nombreObjeto);

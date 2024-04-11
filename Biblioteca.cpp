@@ -12,7 +12,6 @@ class Nino;
 class Objeto;
 
 Biblioteca::Biblioteca() {
-	// TODO Auto-generated constructor stub
 	Objeto* objetos[] = {
 		new Libro("Las Malas",2022,Nuevo,"Camila Sosa Villada",240),
 		new Libro("Nacidos en la bruma: El imperio final",2022,Roto,"Brandon Sanderson",688),
@@ -23,24 +22,30 @@ Biblioteca::Biblioteca() {
 	};
 
 	Nino* ninos[] = {
-		//ninos de prueba
+		new Nino("Maria Laura", 10, "Nueva Palmira 1521", "099298190"),
+		new Nino("Alex", 5, "Humberto Primo 1501", "29094141")
 	};
 
 	for (int i = 0; i<6; i++) {
 		this->insertarNuevoObjeto(objetos[i]);
 	}
 	for (int i = 0; i < 2; i++) {
-		//insertar ninos
+		this->insertarNuevoNino(ninos[i]);
 	}
 }
 
 Biblioteca::~Biblioteca() {
-	// TODO Auto-generated destructor stub
+	//destructor por defecto
+}
+
+void Biblioteca::insertarNuevoNino(Nino* nuevoNino) {
+	this->ninos.insert(nuevoNino);
+	//cout << "::::::Se insertó el niño::::::\n" << nuevoNino->getNombre();
 }
 
 void Biblioteca::insertarNuevoObjeto(Objeto* nuevoObjeto) {
 	this->objetos.insert(nuevoObjeto);
-	cout << ":::::::::Se insertó el objeto:::::::::\n" << nuevoObjeto->toString();
+	//cout << "::::::Se insertó el objeto::::::\n" << nuevoObjeto->toString();
 }
 
 void Biblioteca::removerObjeto(string nombreObjeto) {
@@ -53,7 +58,7 @@ void Biblioteca::removerObjeto(string nombreObjeto) {
 	} else {
 		//seteo en null del puntero en el niño que lo tenga prestado
 		//seteo en null del puntero hacia el niño que lo posea en el objeto
-		//delete del objeto
+		//delete del objeto de la coleccion
 	}
 }
 

@@ -8,12 +8,12 @@
 #include "Objeto.h"
 
 Objeto::Objeto() {
-	// TODO Auto-generated constructor stub
-
+	//constructor por defecto
 }
 
 Objeto::~Objeto() {
-	// TODO Auto-generated destructor stub
+	//destructor por defecto
+	//romper link con nino
 }
 
 string Objeto::estadoToString(){
@@ -29,4 +29,12 @@ string Objeto::estadoToString(){
 
 string Objeto::getNombre() {
 	return this->nombre;
+}
+
+bool Objeto::estaPrestado() {
+	return this->prestadoA != nullptr;
+}
+
+Nino* Objeto::perteneceA() {
+	return this->prestadoA;
 }

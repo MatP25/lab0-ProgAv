@@ -6,16 +6,48 @@
  */
 
 #include "Nino.h"
+#include "Objeto.h"
 
 Nino::Nino() {
-	// TODO Auto-generated constructor stub
+	//constructor por defecto
+}
 
+Nino::Nino(string nombre, int edad, string direccion, string telefono) {
+	this->nombre = nombre;
+	this->edad = edad;
+	this->direccion = direccion;
+	this->telefono = telefono;
 }
 
 Nino::~Nino() {
-	// TODO Auto-generated destructor stub
+	// destructor por defecto
+	// romper link con objetos en prestamo
 }
 
 string Nino::getNombre() {
 	return this->nombre;
 }
+
+void Nino::pedirObjeto(Objeto* objeto) {
+
+	if (objeto->estaPrestado()) {
+		if (objeto->perteneceA() == this) {
+			cout
+				<< "El objeto ["
+				<< objeto->getNombre()
+				<< "] ya pertenece a "
+				<< this->getNombre()
+				<< "." << endl;
+		} else {
+			cout
+				<<"El objeto ["
+				<< objeto->getNombre()
+				<<"] ya ha sido tomado por otro niño."
+				<< endl;
+		}
+	} else {
+		this->objetosEnPrestamo.insert(objeto);
+	}
+
+}
+

@@ -8,7 +8,7 @@
 #include "JuegoDeMesa.h"
 
 JuegoDeMesa::JuegoDeMesa() {
-	// TODO Auto-generated constructor stub
+	// constructor por defecto
 
 }
 
@@ -25,7 +25,7 @@ JuegoDeMesa::JuegoDeMesa(string nombre,
 }
 
 JuegoDeMesa::~JuegoDeMesa() {
-	// TODO Auto-generated destructor stub
+	// destructor por defecto
 }
 
 string JuegoDeMesa::toString() {

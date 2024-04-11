@@ -9,12 +9,11 @@
 #include "iostream"
 
 Libro::Libro() {
-	// TODO Auto-generated constructor stub
-
+	// constructor por defecto
 }
 
 Libro::~Libro() {
-	// TODO Auto-generated destructor stub
+	// destructor por defecto
 }
 
 Libro::Libro(string nombre,
