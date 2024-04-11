@@ -83,7 +83,7 @@ Objeto* Biblioteca::getObjeto(string nombreObjeto){
 string Biblioteca::ninosToString() {
 	string listadoNinos = "";
 	for (Nino* ptr : this->ninos) {
-		listadoNinos += ptr->getNombre();
+		listadoNinos += ptr->getNombre() + "\n";
 	}
 	return listadoNinos;
 }
@@ -91,7 +91,7 @@ string Biblioteca::ninosToString() {
 string Biblioteca::objetosToString() {
 	string listadoObjetos = "";
 	for (Objeto* ptr : this->objetos) {
-		listadoObjetos += ptr->toString();
+		listadoObjetos += ptr->toString() + "\n";
 	}
 	return listadoObjetos;
 }
