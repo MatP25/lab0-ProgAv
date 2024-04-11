@@ -12,6 +12,7 @@ class Nino;
 class Objeto;
 
 Biblioteca::Biblioteca() {
+	//creo objetos de prueba
 	Objeto* objetos[] = {
 		new Libro("Las Malas",2022,Nuevo,"Camila Sosa Villada",240),
 		new Libro("Nacidos en la bruma: El imperio final",2022,Roto,"Brandon Sanderson",688),
@@ -20,30 +21,26 @@ Biblioteca::Biblioteca() {
 		new JuegoDeMesa("Mazo de Cartas",7,Nuevo,2019,4),
 		new JuegoDeMesa("Dados",2,Roto,2020,6)
 	};
-
+	//creo niños de prueba
 	Nino* ninos[] = {
 		new Nino("Maria Laura", 10, "Nueva Palmira 1521", "099298190"),
 		new Nino("Alex", 5, "Humberto Primo 1501", "29094141")
 	};
-
+	//agrego las referencias a la coleccion de objetos de la biblioteca
 	for (int i = 0; i<6; i++) {
 		this->insertarNuevoObjeto(objetos[i]);
 	}
+	//agrego las referencias a la coleccion de niños de la biblioteca
 	for (int i = 0; i < 2; i++) {
 		this->insertarNuevoNino(ninos[i]);
 	}
 
+	//creo los enlaces entre los objetos
 	ninos[0]->pedirObjeto(objetos[4]);
 	ninos[0]->pedirObjeto(objetos[1]);
 	ninos[0]->pedirObjeto(objetos[5]);
 	ninos[1]->pedirObjeto(objetos[3]);
 	ninos[1]->pedirObjeto(objetos[2]);
-
-
-
-
-	        // this->objetos.erase(objetos[0]);
-	      //  cout<< "------ " <<ninos[0]->listarObjetosPrestados();
 
 }
 
@@ -69,9 +66,7 @@ void Biblioteca::removerObjeto(string nombreObjeto) {
 			<< nombreObjeto << "]"
 			<< endl;
 	} else {
-		//seteo en null del puntero en el niño que lo tenga prestado
-		//seteo en null del puntero hacia el niño que lo posea en el objeto
-		//delete del objeto de la coleccion
+		//delete del objeto
 	}
 }
 

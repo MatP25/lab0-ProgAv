@@ -18,6 +18,7 @@ JuegoDeMesa::JuegoDeMesa(string nombre,
 			int anioComprado,
 			int cantJugadores) {
 	this->nombre = nombre;
+	this->prestadoA = nullptr;
 	this->edadRecomendada = edadRecomendada;
 	this->condicion = condicion;
 	this->anioComprado = anioComprado;

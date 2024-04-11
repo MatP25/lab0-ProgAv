@@ -23,6 +23,7 @@ Libro::Libro(string nombre,
 		int cantPaginas) {
 
 	this->nombre = nombre;
+	this->prestadoA = nullptr;
 	this->anioComprado = anioComprado;
 	this->condicion = condicion;
 	this->autor = autor;
