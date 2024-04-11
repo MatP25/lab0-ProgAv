@@ -40,8 +40,6 @@ Biblioteca::Biblioteca() {
 	ninos[1]->pedirObjeto(objetos[2]);
 
 
-	//cout<< ninos[0]->listarObjetosPrestados();
-	//cout<< ninos[1]->listarObjetosPrestados();
 
 
 	        // this->objetos.erase(objetos[0]);
@@ -109,4 +107,16 @@ string Biblioteca::objetosToString() {
 		listadoObjetos += ptr->toString() + "\n";
 	}
 	return listadoObjetos;
+}
+
+void Biblioteca::listarTodosObjetosPrestados() {
+
+	for (Nino* ptrNino : this->ninos) {
+		cout << "Objetos prestados a: " << ptrNino->getNombre() << endl;
+		for (string str : ptrNino->listarObjetosPrestados()) {
+			cout << str << endl;
+		}
+	}
+
+
 }

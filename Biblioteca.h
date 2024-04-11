@@ -27,6 +27,7 @@ public:
 	Objeto* getObjeto(string nombreObjeto);
 	string ninosToString();
 	string objetosToString();
+	void listarTodosObjetosPrestados();
 };
 
 #endif /* BIBLIOTECA_H_ */

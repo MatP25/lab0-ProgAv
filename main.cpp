@@ -16,7 +16,7 @@ int main() {
 	cout << biblioteca->objetosToString();
 	cout << "_______________________________________" << endl;
 
-
+	biblioteca->listarTodosObjetosPrestados();
 
 
 	return 0;
