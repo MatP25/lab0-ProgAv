@@ -34,6 +34,7 @@ public:
 	string getNombre();
 	bool estaPrestado();
 	Nino* perteneceA();
+	void setPrestadoA(Nino* prestadoA);
 };
 
 #endif /* OBJETO_H_ */

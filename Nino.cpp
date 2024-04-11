@@ -47,7 +47,32 @@ void Nino::pedirObjeto(Objeto* objeto) {
 		}
 	} else {
 		this->objetosEnPrestamo.insert(objeto);
+		objeto->setPrestadoA(this);
 	}
 
 }
 
+set<string> Nino::listarObjetosPrestados() {
+	set<string> objetosPrestados;
+
+	for (Objeto* ptrObj : this->objetosEnPrestamo) {
+		objetosPrestados.insert(ptrObj->toString());
+	}
+
+	return objetosPrestados;
+}
+
+/*
+ostream& operator<<(ostream& os, set<string> objetosPrestados) {
+
+	string st = "";
+
+	for (string str : objetosPrestados) {
+		st += str;
+	}
+
+	os << "Objetos prestados: \n" << st << endl;
+
+	return os;
+}
+*/

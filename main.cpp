@@ -20,12 +20,7 @@ int main() {
 
 
 	return 0;
-}/*
- * main.cpp
- *
- *  Created on: Apr 8, 2024
- *      Author: mat
- */
+}
 
 
 

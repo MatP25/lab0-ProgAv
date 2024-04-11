@@ -35,6 +35,10 @@ bool Objeto::estaPrestado() {
 	return this->prestadoA != nullptr;
 }
 
+void Objeto::setPrestadoA(Nino* prestadoA) {
+	this->prestadoA = prestadoA;
+}
+
 Nino* Objeto::perteneceA() {
 	return this->prestadoA;
 }

@@ -32,6 +32,21 @@ Biblioteca::Biblioteca() {
 	for (int i = 0; i < 2; i++) {
 		this->insertarNuevoNino(ninos[i]);
 	}
+
+	ninos[0]->pedirObjeto(objetos[4]);
+	ninos[0]->pedirObjeto(objetos[1]);
+	ninos[0]->pedirObjeto(objetos[5]);
+	ninos[1]->pedirObjeto(objetos[3]);
+	ninos[1]->pedirObjeto(objetos[2]);
+
+
+	//cout<< ninos[0]->listarObjetosPrestados();
+	//cout<< ninos[1]->listarObjetosPrestados();
+
+
+	        // this->objetos.erase(objetos[0]);
+	      //  cout<< "------ " <<ninos[0]->listarObjetosPrestados();
+
 }
 
 Biblioteca::~Biblioteca() {
