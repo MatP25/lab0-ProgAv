@@ -30,7 +30,6 @@ public:
 	string getNombre();
 	void pedirObjeto(Objeto* objeto);
 	void devolverObjeto(Objeto* objeto, Nino* nino);
-	//friend ostream& operator<<(ostream& os, set<string> objPrestados);
 };
 
 #endif /* NINO_H_ */

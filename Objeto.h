@@ -10,9 +10,7 @@
 
 #include "string"
 #include "iostream"
-
 #include "Nino.h"
-
 using namespace std;
 
 class Nino;

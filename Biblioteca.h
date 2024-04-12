@@ -9,6 +9,8 @@
 #define BIBLIOTECA_H_
 
 #include "Objeto.h"
+#include "JuegoDeMesa.h"
+#include "Libro.h"
 #include "Nino.h"
 #include "set"
 
@@ -28,6 +30,9 @@ public:
 	string ninosToString();
 	string objetosToString();
 	void listarTodosObjetosPrestados();
+	void imprimirListado();
+	void consulta();
+	void listarObjetosRotos();
 };
 
 #endif /* BIBLIOTECA_H_ */

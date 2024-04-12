@@ -6,10 +6,12 @@
  */
 
 #include "Nino.h"
-#include "Objeto.h"
 
 Nino::Nino() {
-	//constructor por defecto
+	this->nombre = "";
+	this->edad = 0;
+	this->direccion = "";
+	this->telefono = "";
 }
 
 Nino::Nino(string nombre, int edad, string direccion, string telefono) {
@@ -61,18 +63,3 @@ set<string> Nino::listarObjetosPrestados() {
 
 	return objetosPrestados;
 }
-
-/*
-ostream& operator<<(ostream& os, set<string> objetosPrestados) {
-
-	string st = "";
-
-	for (string str : objetosPrestados) {
-		st += str;
-	}
-
-	os << "Objetos prestados: \n" << st << endl;
-
-	return os;
-}
-*/

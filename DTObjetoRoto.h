@@ -15,19 +15,17 @@ using namespace std;
 class DTObjetoRoto {
 
 private:
+	string nombreNino;
 	string nombreObjeto;
 	bool prestado;
-	string nombreNino;
 public:
 	DTObjetoRoto();
 	DTObjetoRoto(Objeto* NombreObjeto);
 	virtual ~DTObjetoRoto();
-	void setNombreNino(string NombreNino);
 	string getNombreNino();
-	void setNombreObjeto(string NombreObjeto);
 	string getNombreObjeto();
-	void setPrestado(bool Prestado);
-	bool esPrestado();
+	string estaPrestado();
+	friend ostream& operator<<(ostream& os, DTObjetoRoto*& ObjRoto);
 };
 
 #endif /* DTOBJETOROTO_H_ */

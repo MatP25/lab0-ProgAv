@@ -6,8 +6,9 @@
  */
 
 #include "Biblioteca.h"
-#include "JuegoDeMesa.h"
-#include "Libro.h"
+#include "DTObjetoRoto.h"
+#include "stdio_ext.h"
+
 class Nino;
 class Objeto;
 
@@ -107,11 +108,62 @@ string Biblioteca::objetosToString() {
 void Biblioteca::listarTodosObjetosPrestados() {
 
 	for (Nino* ptrNino : this->ninos) {
-		cout << "Objetos prestados a: " << ptrNino->getNombre() << endl;
+		cout << "\nObjetos prestados por " << ptrNino->getNombre() << endl;
 		for (string str : ptrNino->listarObjetosPrestados()) {
 			cout << str << endl;
 		}
 	}
+}
 
+void Biblioteca::listarObjetosRotos(){
+	string listadoObjetosRotos = "";
+	for (Objeto* ptr : this->objetos){
+		if (ptr->estadoToString() == "Roto"){
+			DTObjetoRoto* ObjRoto = new DTObjetoRoto(ptr);
+			cout<<ObjRoto<<endl;
+			delete ObjRoto;
+		}
+	}
+}
 
+void Biblioteca::imprimirListado(){
+	cout<<"Bienvenido a nuestra Biblioteca\n"<<endl;
+	cout<<"1. Consultar por objetos creados"<<endl;
+	cout<<"2. Consultar por los objetos prestados"<<endl;
+	cout<<"3. Listar objetos rotos"<<endl;
+	cout<<"0. Salir del sistema\n"<<endl;
+}
+
+void Biblioteca::consulta(){
+	char out;
+	this->imprimirListado();
+	cout << "Ingrese valor deseado: ";
+	cin >> out;
+	system("clear");
+
+	while(out != '0'){
+		switch(out){
+		case '1': {
+			cout << this->objetosToString();
+			break;
+			}
+		case '2': {
+			this->listarTodosObjetosPrestados();
+			break;
+			}
+		case '3': {
+			this->listarObjetosRotos();
+			break;
+			}
+		default: cout << "Error" << endl;
+
+		}
+		__fpurge(stdin);
+		cout<<"Presione cualquier tecla para continuar: ";
+		getchar();
+		system("clear");
+		this->imprimirListado();
+		cout << "Ingrese valor deseado: ";
+		cin >> out;
+	}
 }
